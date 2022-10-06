@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: walterpvnettest 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: walterpvnettest
+  template:
+    metadata:
+      labels:
+        app: walterpvnettest 
+    spec:
+      containers:
+        - name: walterpvnettest 
+          image: svaclarocontainer.azurecr.io/walterpvnettest
+          ports:
+          - containerPort: 80
