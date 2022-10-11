@@ -8,8 +8,8 @@ ENV ASPNETCORE_URLS=http://+:80
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0-focal AS build
 
-COPY ["TestNet.app/TestNet.app.csproj", "TestNet.app/"]  
-WORKDIR /src 
+WORKDIR /src
+COPY ["TestNet.app.csproj", "TestNet.app/"]   
 RUN dotnet restore "TestNet.app/TestNet.app.csproj"
 COPY . .
 WORKDIR "/src/TestNet.app"
