@@ -42,6 +42,10 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+    -task: Docker@2
+      inputs:
+        command: build
+        arguments: --build-arg path=$(Build.Repository.LocalPath)     
 
     - upload: manifests
       artifact: manifests
