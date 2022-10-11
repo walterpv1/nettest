@@ -42,7 +42,7 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
-    -task: Docker@2
+    - task: Docker@2
       inputs:
         command: build
         arguments: --build-arg path=$(Build.Repository.LocalPath)     
