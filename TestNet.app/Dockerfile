@@ -6,7 +6,7 @@ ENV ASPNETCORE_URLS=http://+:80
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0-focal AS build
 WORKDIR /src
-COPY ["TestNet.app/TestNet.app.csproj", "TestNet.app/"]
+COPY ["/TestNet.app/TestNet.app.csproj", "TestNet.app/"]
 RUN dotnet restore "TestNet.app/TestNet.app.csproj"
 COPY . .
 WORKDIR "/src/TestNet.app"
@@ -18,4 +18,4 @@ RUN dotnet publish "TestNet.app.csproj" -c Release -o /app/publish /p:UseAppHost
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "TestNet.app.dll"]
+ENTRYPOINT ["dotnet", "TestNet.app.dll"] 
