@@ -46,12 +46,12 @@
             "dockerBuild": {
                 "tag": "nettest:dev",
                 "target": "base",
-                "dockerfile": "${workspaceFolder}/TestNet.app/Dockerfile",
+                "dockerfile": "${workspaceFolder}/Dockerfile",
                 "context": "${workspaceFolder}",
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/TestNet.app/TestNet.app.csproj"
+                "appProject": "${workspaceFolder}/nettest.csproj"
             }
         },
         {
@@ -62,12 +62,12 @@
             ],
             "dockerBuild": {
                 "tag": "nettest:latest",
-                "dockerfile": "${workspaceFolder}/TestNet.app/Dockerfile",
+                "dockerfile": "${workspaceFolder}/Dockerfile",
                 "context": "${workspaceFolder}",
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/TestNet.app/TestNet.app.csproj"
+                "appProject": "${workspaceFolder}/nettest.csproj"
             }
         },
         {
@@ -78,7 +78,7 @@
             ],
             "dockerRun": {},
             "netCore": {
-                "appProject": "${workspaceFolder}/TestNet.app/TestNet.app.csproj",
+                "appProject": "${workspaceFolder}/nettest.csproj",
                 "enableDebugging": true,
                 "configureSsl": false
             }
@@ -91,7 +91,7 @@
             ],
             "dockerRun": {},
             "netCore": {
-                "appProject": "${workspaceFolder}/TestNet.app/TestNet.app.csproj"
+                "appProject": "${workspaceFolder}/nettest.csproj"
             }
         }
     ]

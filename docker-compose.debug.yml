@@ -3,11 +3,11 @@
 version: '3.4'
 
 services:
-  testnetapp:
-    image: testnetapp
+  nettest:
+    image: nettest
     build:
       context: .
-      dockerfile: TestNet.app/Dockerfile
+      dockerfile: ./Dockerfile
     ports:
       - 80:80
     environment:

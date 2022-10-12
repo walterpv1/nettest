@@ -32,7 +32,7 @@
             "request": "launch",
             "preLaunchTask": "docker-run: debug",
             "netCore": {
-                "appProject": "${workspaceFolder}/TestNet.app/TestNet.app.csproj"
+                "appProject": "${workspaceFolder}/nettest.csproj"
             }
         }
     ]
